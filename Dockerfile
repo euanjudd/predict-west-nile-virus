@@ -8,12 +8,25 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends gcc python3-dev sqlite3
-
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    python3-dev \
+    libffi-dev \
+    libssl-dev \
+    libjpeg-dev \
+    zlib1g-dev \
+    libblas-dev \
+    liblapack-dev \
+    gfortran \
+    pkg-config \
+    libhdf5-dev \
+    libsnappy-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 # Install pip requirements
 COPY requirements.txt .
-RUN python -m pip install -r requirements.txt
+RUN python -m pip install --no-cache-dir -r requirements.txt
 
 WORKDIR /app
 COPY . /app

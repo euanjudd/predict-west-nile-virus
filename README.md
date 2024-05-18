@@ -1,5 +1,7 @@
 # Predict West Nile Virus in Mosquito Traps
 
+   - See the Tableau Public Dashboard [here](https://public.tableau.com/app/profile/euan.judd/viz/PredictWestNileVirus/Dashboard) to learn more about the data and prediction results.
+
 ## Project Overview
 
 This project leveraged machine learning to strategically predict and manage the risk of West Nile Virus in Chicago by identifying mosquito traps that were likely to test positive. The objective was to efficiently allocate resources by minimising unnecessary testing and focusing efforts on high-risk areas, thus balancing cost-effectiveness with enhanced public safety measures. This approach not only helped in optimising the city's public health response but also in reducing the financial burden associated with widespread testing.
